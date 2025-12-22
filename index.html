@@ -1,40 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Climate Change & Agricultural Productivity Dashboard</title>
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
-    h1 { color: #2E5B9A; }
-    a { color: #1A73E8; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 40px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #2E5B9A;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #1f3f66;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 5px;
+      margin-top: 30px;
+    }
+
+    p, li {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .team {
+      text-align: center;
+      font-weight: 500;
+    }
+
+    a {
+      color: #1A73E8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 12px 20px;
+      background-color: #2E5B9A;
+      color: #ffffff;
+      border-radius: 6px;
+    }
+
+    .button:hover {
+      background-color: #244a7a;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
   </style>
 </head>
+
 <body>
 
-  <h1>Climate Change Impact on Agricultural Productivity</h1>
+  <div class="container">
 
-  <h2>Created By</h2>
-  <p>Lamia Asad</p>
+    <h1>Climate Change Impact on Agricultural Productivity</h1>
 
-  <h2>Project Overview</h2>
-  <p>This interactive dashboard visualizes the impact of climate change on agricultural productivity metrics across regions over time. It allows users to explore patterns, trends, and correlations between climatic factors and crop yield variations.</p>
+    <div class="team">
+      <p>Lamia Asad (2022258)</p>
+      <p>Fatima Shabbir (2022173)</p>
+    </div>
 
-  <h2>Dataset Used</h2>
-  <p>The dataset includes climate variables (temperature, rainfall, etc.) and agricultural output data. It helps in analyzing how shifts in weather patterns influence productivity.</p>
+    <h2>Project Overview</h2>
+    <p>
+      This interactive dashboard visualizes the impact of climate change on agricultural productivity across different regions and time periods. Users can explore trends, compare variables, and analyze how climate factors influence crop yields.
+    </p>
 
-  <h2>Tools & Technologies</h2>
-  <ul>
-    <li>Tableau Public</li>
-    <li>GitHub Pages (for this project page)</li>
-  </ul>
+    <h2>Dataset Used</h2>
+    <p>
+      The dataset includes key climate variables such as temperature and rainfall along with agricultural productivity indicators. It supports analysis of climate-driven changes in agricultural output.
+    </p>
 
-  <h2>View the Dashboard</h2>
-  <a href="https://public.tableau.com/app/profile/lamia.asad/viz/DataVisproject_17660759742850/ClimateChangeImpactonAgriculturalProductivity?publish=yes" target="_blank">
-    Open Tableau Dashboard
-  </a>
+    <h2>Tools & Technologies</h2>
+    <ul>
+      <li>Tableau Public – dashboard creation and visualization</li>
+      <li>GitHub Pages – project hosting</li>
+    </ul>
 
-  <h2>Video Walkthrough</h2>
-  <p><em>Video link to be added after recording</em></p>
+    <h2>Dashboard</h2>
+    <a class="button" href="https://public.tableau.com/app/profile/lamia.asad/viz/DataVisproject_17660759742850/ClimateChangeImpactonAgriculturalProductivity?publish=yes" target="_blank">
+      View Tableau Dashboard
+    </a>
+
+    <h2>Video Walkthrough</h2>
+    <a class="button" href="https://1drv.ms/v/c/6a09458e1ad25e9f/IQAWVsRFJarYSrMnPrlzmIZ5ARfNZ9FKaUBd2G15FRSchws?e=84bilR" target="_blank">
+      Watch Video Walkthrough
+    </a>
+
+    <div class="footer">
+      <p>Data Visualization Project • 2025</p>
+    </div>
+
+  </div>
 
 </body>
 </html>
