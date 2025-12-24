@@ -4,80 +4,149 @@
   <meta charset="UTF-8">
   <title>Climate Change & Agricultural Productivity Dashboard</title>
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
-      background-color: #f4f6f8;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1f3f66, #2e5b9a, #6aa5ff);
+      min-height: 100vh;
       color: #333;
     }
 
     .container {
-      max-width: 900px;
-      margin: auto;
-      background: #ffffff;
-      padding: 40px;
-      margin-top: 40px;
-      margin-bottom: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 50px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     h1 {
-      color: #2E5B9A;
       text-align: center;
+      font-size: 36px;
+      color: #1f3f66;
       margin-bottom: 10px;
     }
 
+    .subtitle {
+      text-align: center;
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
     h2 {
-      color: #1f3f66;
-      border-bottom: 2px solid #e0e0e0;
-      padding-bottom: 5px;
-      margin-top: 30px;
+      font-size: 24px;
+      color: #2e5b9a;
+      margin-bottom: 15px;
+      position: relative;
+    }
+
+    h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: linear-gradient(to right, #2e5b9a, #6aa5ff);
+      display: block;
+      margin-top: 8px;
+      border-radius: 10px;
     }
 
     p, li {
       font-size: 16px;
-      line-height: 1.7;
+      line-height: 1.8;
+      color: #444;
     }
 
     ul {
-      padding-left: 20px;
+      padding-left: 25px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.12);
     }
 
     .team {
       text-align: center;
+      margin-bottom: 40px;
       font-weight: 500;
+      color: #555;
     }
 
-    a {
-      color: #1A73E8;
-      text-decoration: none;
-      font-weight: 600;
+    .team p {
+      margin: 5px 0;
     }
 
-    a:hover {
-      text-decoration: underline;
+    .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
     }
 
     .button {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 12px 20px;
-      background-color: #2E5B9A;
+      padding: 14px 28px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #2e5b9a, #6aa5ff);
       color: #ffffff;
-      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 20px rgba(46, 91, 154, 0.35);
+      transition: all 0.3s ease;
     }
 
     .button:hover {
-      background-color: #244a7a;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(46, 91, 154, 0.45);
+      background: linear-gradient(135deg, #244a7a, #4f8fff);
     }
 
     .footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 50px;
       font-size: 14px;
-      color: #666;
+      color: #777;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px;
+        margin: 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
@@ -87,37 +156,47 @@
   <div class="container">
 
     <h1>Climate Change Impact on Agricultural Productivity</h1>
+    <p class="subtitle">Interactive Data Visualization Dashboard</p>
 
     <div class="team">
-      <p>Lamia Asad (2022258)</p>
-      <p>Fatima Shabbir (2022173)</p>
+      <p><strong>Lamia Asad</strong> (2022258)</p>
+      <p><strong>Fatima Shabbir</strong> (2022173)</p>
     </div>
 
-    <h2>Project Overview</h2>
-    <p>
-      This interactive dashboard visualizes the impact of climate change on agricultural productivity across different regions and time periods. Users can explore trends, compare variables, and analyze how climate factors influence crop yields.
-    </p>
+    <div class="card">
+      <h2>Project Overview</h2>
+      <p>
+        This interactive dashboard visualizes the impact of climate change on agricultural productivity across different regions and time periods. Users can explore trends, compare variables, and analyze how climate factors influence crop yields.
+      </p>
+    </div>
 
-    <h2>Dataset Used</h2>
-    <p>
-      The dataset includes key climate variables such as temperature and rainfall along with agricultural productivity indicators. It supports analysis of climate-driven changes in agricultural output.
-    </p>
+    <div class="card">
+      <h2>Dataset Used</h2>
+      <p>
+        The dataset includes key climate variables such as temperature and rainfall along with agricultural productivity indicators. It supports analysis of climate-driven changes in agricultural output.
+      </p>
+    </div>
 
-    <h2>Tools & Technologies</h2>
-    <ul>
-      <li>Tableau Public – dashboard creation and visualization</li>
-      <li>GitHub Pages – project hosting</li>
-    </ul>
+    <div class="card">
+      <h2>Tools & Technologies</h2>
+      <ul>
+        <li>Tableau Public – dashboard creation and visualization</li>
+        <li>GitHub Pages – project hosting</li>
+      </ul>
+    </div>
 
-    <h2>Dashboard</h2>
-    <a class="button" href="https://public.tableau.com/app/profile/lamia.asad/viz/DataVisproject_17660759742850/ClimateChangeImpactonAgriculturalProductivity?publish=yes" target="_blank">
-      View Tableau Dashboard
-    </a>
+    <div class="card">
+      <h2>Explore the Project</h2>
+      <div class="buttons">
+        <a class="button" href="https://public.tableau.com/app/profile/lamia.asad/viz/DataVisproject_17660759742850/ClimateChangeImpactonAgriculturalProductivity?publish=yes" target="_blank">
+          View Tableau Dashboard
+        </a>
 
-    <h2>Video Walkthrough</h2>
-    <a class="button" href="https://1drv.ms/v/c/6a09458e1ad25e9f/IQAWVsRFJarYSrMnPrlzmIZ5ARfNZ9FKaUBd2G15FRSchws?e=84bilR" target="_blank">
-      Watch Video Walkthrough
-    </a>
+        <a class="button" href="https://1drv.ms/v/c/6a09458e1ad25e9f/IQAWVsRFJarYSrMnPrlzmIZ5ARfNZ9FKaUBd2G15FRSchws?e=84bilR" target="_blank">
+          Watch Video Walkthrough
+        </a>
+      </div>
+    </div>
 
     <div class="footer">
       <p>Data Visualization Project • 2025</p>
